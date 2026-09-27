@@ -1,5 +1,6 @@
 package com.example.plantilla
 
+import Screen.BanderaMexico
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -14,6 +15,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -29,56 +31,22 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            @Composable
-            fun BanderaMexico(modifier: Modifier = Modifier) {
-                Row(modifier = modifier.fillMaxSize()) {
-                    Column(
-                        modifier = Modifier
-                            .weight(1f)
-                            .fillMaxHeight()
-                            .background(Color(0xFF006341))
-                    ) {}
-                    Column(
-                        modifier = Modifier
-                            .weight(1f)
-                            .fillMaxHeight()
-                            .background(Color.White),
-                        horizontalAlignment = Alignment.CenterHorizontally,
-                        verticalArrangement = Arrangement.Center
-
-                    ) {
-                        Image(
-                            painter = painterResource(id = R.drawable.mexico),
-                            contentDescription = "Escudo nacional",
-                            modifier = Modifier.size(60.dp)
-                        )
-                    }
-                    Column(
-                        modifier = Modifier
-                            .weight(1f)
-                            .fillMaxHeight()
-                            .background(Color(0xFFCE1126))
-                    ) {}
-                }
+            Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+                BanderaMexico(modifier = Modifier.padding(innerPadding),)
             }
-
-
         }
     }
 }
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
+
+
+
+
 
 @Preview(showBackground = true)
 @Composable
-fun GreetingPreview() {
-    PlantillaTheme {
-        Greeting("Android")
+fun BanderaMexicoPreview() {
+    Surface {
+        BanderaMexico(modifier = Modifier.fillMaxSize())
     }
 }
