@@ -1,5 +1,6 @@
 package com.example.plantilla
 
+import Screen.Banderafrancia
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -25,36 +26,16 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContent {
+        setContent {Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+            Banderafrancia(modifier = Modifier.padding(innerPadding),)
+        }
+
         }
     }
 }
 
 
-@Composable
-fun Banderafrancia(modifier: Modifier = Modifier) {
-    Row(modifier = modifier.fillMaxSize()) {
-        Column(
-            modifier = Modifier
-                .weight(1f)
-                .fillMaxHeight()
-                .background(Color(0xFF0055A4))
-        ) {}
-        Column(
-            modifier = Modifier
-                .weight(1f)
-                .fillMaxHeight()
-                .background(Color.White)
 
-        ) {}
-        Column(
-            modifier = Modifier
-                .weight(1f)
-                .fillMaxHeight()
-                .background(Color(0xFFEF4135))
-        ) {}
-    }
-}
 
 @Preview(showBackground = true)
 @Composable
