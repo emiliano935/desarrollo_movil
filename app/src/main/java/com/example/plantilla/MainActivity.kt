@@ -1,5 +1,6 @@
 package com.example.plantilla
 
+import Screen.BanderaAlemania
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -24,34 +25,15 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
+            Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+                BanderaAlemania(modifier = Modifier.padding(innerPadding),)
+            }
 
         }
     }
 }
 
-@Composable
-fun BanderaAlemania(modifier: Modifier = Modifier) {
-    Column(modifier = modifier.fillMaxSize()) {
-        Box(
-            modifier = Modifier
-                .weight(1f)
-                .fillMaxWidth()
-                .background(Color(0xFF000000))
-        )
-        Box(
-            modifier = Modifier
-                .weight(1f)
-                .fillMaxWidth()
-                .background(Color(0xFFDD0000)),
-        )
-        Box(
-            modifier = Modifier
-                .weight(1f)
-                .fillMaxWidth()
-                .background(Color(0xFFFFCE00))
-        )
-    }
-}
+
 
 @Preview(showBackground = true)
 @Composable
