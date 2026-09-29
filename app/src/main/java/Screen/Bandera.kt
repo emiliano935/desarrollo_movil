@@ -22,7 +22,7 @@ import androidx.constraintlayout.compose.ConstraintLayout
 import androidx.constraintlayout.compose.Dimension
 import com.example.plantilla.R
 
-
+//
 @Composable
 fun Banderafrancia(modifier: Modifier = Modifier) {
     ConstraintLayout(modifier = modifier) {
