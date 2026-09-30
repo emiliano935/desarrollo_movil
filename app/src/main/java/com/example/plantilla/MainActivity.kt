@@ -1,5 +1,7 @@
 package com.example.plantilla
 
+import Screen.Banderaespana
+import Screen.BanderaespanaPreview
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -29,47 +31,14 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
+            Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+                Banderaespana (modifier = Modifier.fillMaxSize().padding(innerPadding),)
+            }
 
         }
     }
 }
 
-@Composable
-fun Banderaespana (modifier: Modifier = Modifier){
-    Column(modifier= modifier.fillMaxSize()){
-        Box(
-            modifier = Modifier
-                .weight(1f)
-                .fillMaxWidth()
-                .background(Color(0xFFAA151B))
-        )
-
-        Box(
-            modifier = Modifier
-                .weight(2f)
-                .fillMaxWidth()
-                .background(Color(0xFFF1BF00)),
-            contentAlignment = Alignment.CenterStart
-        ){
-            Image(
-                painter = painterResource(id = R.drawable.espana),
-                contentDescription = "Escudo nacional",
-                modifier = Modifier.size(120.dp)
-            )
-        }
-
-        Box(
-            modifier = Modifier
-                .weight(1f)
-                .fillMaxWidth()
-                .background(Color(0xFFAA151B)),
-
-            )
-
-
-    }
-
-}
 
 @Preview(showBackground = true)
 @Composable
