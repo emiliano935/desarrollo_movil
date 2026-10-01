@@ -1,5 +1,6 @@
 package com.example.plantilla
 
+import Screen.BanderaColombia
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -17,41 +18,21 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.plantilla.ui.theme.PlantillaTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
+            Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+                BanderaColombia(modifier = Modifier.fillMaxSize().padding(innerPadding),)
+            }
 
         }
     }
 }
 
-@Composable
-fun BanderaColombia(modifier: Modifier = Modifier) {
-    Column(modifier = modifier.fillMaxSize()) {
-        Row(
-            modifier = Modifier
-                .weight(2f)
-                .fillMaxWidth()
-                .background(Color.Yellow)
-        ){}
-        Row(
-            modifier = Modifier
-                .weight(1f)
-                .fillMaxWidth()
-                .background(Color.Blue),
-        ){}
-        Row(
-            modifier = Modifier
-                .weight(1f)
-                .fillMaxWidth()
-                .background(Color.Red)
-        ){}
-    }
-}
+
 
 @Preview(showBackground = true)
 @Composable
