@@ -1,5 +1,6 @@
 package com.example.plantilla
 
+import Screen.Banderajapon
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -32,36 +33,21 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
+            Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+                Banderajapon(modifier = Modifier.fillMaxSize().padding(innerPadding),)
+            }
 
         }
     }
 }
-            @Composable
-            fun BanderaMexico(modifier: Modifier = Modifier) {
-                Box(modifier = modifier.fillMaxSize()
-                    .background(colorResource(R.color.white))
-                )  {
-                    Box(
-                        modifier = Modifier
-                            .align(Alignment.Center)
-                            .size(200.dp)
-                            .clip(CircleShape)
-                            .background(colorResource(R.color.japon))
-                    )
 
-
-
-                }
-
-            }
 
 
         @Preview(showBackground = true)
         @Composable
-
-        fun BanderaMexicoPreview() {
+        fun BanderajaponPreview() {
             Surface {
-                BanderaMexico(modifier = Modifier.fillMaxSize())
+                Banderajapon(modifier = Modifier.fillMaxSize())
             }
         }
 
