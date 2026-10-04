@@ -9,4 +9,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="argentuna1">#74ACDF</color>
     <color name="argentina2">#F6B40E</color>
+    <color name="verde">#009739</color>
+    <color name="rombo">#FEDD00</color>
+    <color name="circulo">#012169</color>
 </resources>
