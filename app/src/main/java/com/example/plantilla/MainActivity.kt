@@ -1,5 +1,6 @@
 package com.example.plantilla
 
+import Screen.BanderaArgentina
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -30,46 +31,19 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContent {
+        setContent {Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+            BanderaArgentina(modifier = Modifier.fillMaxSize().padding(innerPadding),)
+        }
         }
     }
 }
 
-val Romboshape = GenericShape { size, _ ->
-    moveTo(size.width / 2f, 0f)
-    lineTo(size.width, size.height / 2f)
-    lineTo(size.width / 2f, size.height)
-    lineTo(0f, size.height / 2f)
-    close()
-}
 
-    @Composable
-    fun Banderaitalia(modifier: Modifier = Modifier) {
-        Box(
-            modifier = Modifier
-                .fillMaxSize()
-                .background(Color(0xFF009B3A)),
-            contentAlignment = Alignment.Center
-        ) {
-            Box(
-                modifier = Modifier
-                    .fillMaxSize(0.75f)
-                    .clip(Romboshape)
-                    .background(colorResource(R.color.brasil2))
-            )
-            Box(
-                modifier = Modifier
-                    .size(90.dp)
-                    .clip(CircleShape)
-                    .background(colorResource(R.color.BRASIL3))
-            )
-        }
-    }
 
     @Preview (showBackground = true)
     @Composable
-    fun BanderaitaliaPreview() {
+    fun BanderaArgentinsPreview() {
         Surface {
-            Banderaitalia(modifier = Modifier.fillMaxSize())
+            BanderaArgentina(modifier = Modifier.fillMaxSize())
         }
     }
