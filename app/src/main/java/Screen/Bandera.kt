@@ -20,26 +20,47 @@ import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.constraintlayout.compose.ConstraintLayout
+import androidx.constraintlayout.compose.Dimension
 import com.example.plantilla.R
 
 @Composable
-fun BanderaEEUU(modifier: Modifier= Modifier){
-    Box(modifier = modifier.fillMaxSize()){
-        Column(Modifier.fillMaxSize()) {
-            repeat(13){index ->
-                Box(Modifier
-                    .weight(1f)
-                    .fillMaxWidth()
-                    .background(if (index %2 ==0 ) Color(0xFFB22234)else Color.White)
+fun BanderaEEUU(modifier: Modifier = Modifier) {
+    ConstraintLayout(
+        modifier = modifier.fillMaxSize()
+    ) {
+        val (franjas, cuadro) = createRefs()
+
+        Column(
+            modifier = Modifier
+                .constrainAs(franjas) {
+                    top.linkTo(parent.top)
+                    bottom.linkTo(parent.bottom)
+                    start.linkTo(parent.start)
+                    end.linkTo(parent.end)
+                    width = Dimension.fillToConstraints
+                    height = Dimension.fillToConstraints
+                }
+        ) {
+            repeat(13) { index ->
+                Box(
+                    modifier = Modifier
+                        .weight(1f)
+                        .fillMaxWidth()
+                        .background(if (index % 2 == 0) Color(0xFFB22234) else Color.White)
                 )
             }
         }
+
         Box(
             modifier = Modifier
-                .fillMaxWidth(0.4f)
-                .fillMaxHeight(0.54f)
                 .background(Color(0xFF3C3B6E))
-                .padding(vertical = 4.dp, horizontal = 2.dp)
+                .constrainAs(cuadro) {
+                    top.linkTo(parent.top)
+                    start.linkTo(parent.start)
+                    width = Dimension.percent(0.40f)
+                    height = Dimension.percent(0.538f)
+                }
         ) {
             Column(
                 modifier = Modifier.fillMaxSize(),
@@ -57,7 +78,7 @@ fun BanderaEEUU(modifier: Modifier= Modifier){
                             Image(
                                 painter = painterResource(R.drawable.pngtree_white_star_png_png_image_14549691),
                                 contentDescription = "Estrella",
-                                modifier = Modifier.size(15.dp)
+                                modifier = Modifier.size(20.dp)
                             )
                         }
                     }
@@ -66,8 +87,6 @@ fun BanderaEEUU(modifier: Modifier= Modifier){
         }
     }
 }
-
-
 
 @Preview(showBackground = true)
 @Composable
