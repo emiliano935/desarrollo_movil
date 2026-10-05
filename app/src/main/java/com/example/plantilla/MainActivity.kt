@@ -1,6 +1,7 @@
 package com.example.plantilla
 
-import android.R
+
+import Screen.BanderaEEUU
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -26,31 +27,12 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
+
         }
     }
 }
 
-@Composable
-fun BanderaEEUU(modifier: Modifier= Modifier){
-    Box(modifier = modifier.fillMaxSize()){
-        Column(Modifier.fillMaxSize()) {
-            repeat(13){index ->
-                Box(Modifier
-                    .weight(1f)
-                    .fillMaxWidth()
-                    .background(if (index %2 ==0 ) Color(0xFFB22234)else Color.White)
-                )
-            }
-        }
-        Box(
-            modifier = Modifier
-                .fillMaxWidth(0.4f)
-                .fillMaxHeight(0.54f)
-                .background(Color(0xFF3C3B6E))
-        )
-        //1111
-    }
-}
+
 
 @Preview(showBackground = true)
 @Composable
