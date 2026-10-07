@@ -31,7 +31,7 @@ fun Banderasuiza(modifier: Modifier= Modifier) {
             .fillMaxSize()
     )
     ConstraintLayout(modifier = Modifier.aspectRatio(1f)) {
-        val (recVertical, recHorizontal) = createRefs()
+        val (cuadroVertical, cuadroHorizontal) = createRefs()
         val lineSup1 = createGuidelineFromTop(0.1875f)
         val lineInf1 = createGuidelineFromBottom( 0.1875f)
         val lineIzq1 = createGuidelineFromStart(0.375f)
@@ -46,7 +46,7 @@ fun Banderasuiza(modifier: Modifier= Modifier) {
         Box(
             modifier = Modifier
                 .background(Color.White)
-                .constrainAs(recVertical)
+                .constrainAs(cuadroVertical)
                 {
                     start.linkTo(lineIzq1)
                     end.linkTo(lineDer1)
@@ -62,7 +62,7 @@ fun Banderasuiza(modifier: Modifier= Modifier) {
         Box(
             modifier = Modifier
                 .background(Color.White)
-                .constrainAs(recHorizontal) {
+                .constrainAs(cuadroHorizontal) {
                     start.linkTo(lineIzq2)
                     end.linkTo(lineDer2)
                     top.linkTo(lineSup2)
