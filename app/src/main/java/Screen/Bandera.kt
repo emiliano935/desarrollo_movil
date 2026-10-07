@@ -16,30 +16,64 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.constraintlayout.compose.ConstraintLayout
+import androidx.constraintlayout.compose.Dimension
+import com.example.plantilla.R
 
 @Composable
-fun Banderasuiza(modifier: Modifier= Modifier){
+fun Banderasuiza(modifier: Modifier= Modifier) {
     Box(
         modifier = modifier
             .aspectRatio(1f)
-            .background(Color(0xFFD52B1E))
-    ) {
+            .background(colorResource(R.color.rej))
+            .fillMaxSize()
+    )
+    ConstraintLayout(modifier = Modifier.aspectRatio(1f)) {
+        val (recVertical, recHorizontal) = createRefs()
+        val lineSup1 = createGuidelineFromTop(0.1875f)
+        val lineInf1 = createGuidelineFromBottom( 0.1875f)
+        val lineIzq1 = createGuidelineFromStart(0.375f)
+        val lineDer1 = createGuidelineFromEnd(0.375f)
+
+        val lineSup2 = createGuidelineFromTop(0.375f)
+        val lineInf2 = createGuidelineFromBottom( 0.375f)
+        val lineIzq2 = createGuidelineFromStart(0.1875f)
+        val lineDer2 = createGuidelineFromEnd(0.1875f)
+
+
         Box(
-            Modifier
-                .align(Alignment.Center)
-                .fillMaxWidth(0.2f)
-                .fillMaxHeight(0.62f)
+            modifier = Modifier
                 .background(Color.White)
+                .constrainAs(recVertical)
+                {
+                    start.linkTo(lineIzq1)
+                    end.linkTo(lineDer1)
+                    top.linkTo(lineSup1)
+                    bottom.linkTo(lineInf1)
+
+                    height = Dimension.fillToConstraints
+                    width = Dimension.fillToConstraints
+                }
         )
+
+        // Franja Horizontal de la Cruz Blanca
         Box(
-            Modifier
-                .align(Alignment.Center)
-                .fillMaxHeight(0.2f)
-                .fillMaxWidth(0.62f)
+            modifier = Modifier
                 .background(Color.White)
+                .constrainAs(recHorizontal) {
+                    start.linkTo(lineIzq2)
+                    end.linkTo(lineDer2)
+                    top.linkTo(lineSup2)
+                    bottom.linkTo(lineInf2)
+
+                    height = Dimension.fillToConstraints
+                    width = Dimension.fillToConstraints
+                }
         )
     }
+
 }
 
 @Preview(showBackground = true)
