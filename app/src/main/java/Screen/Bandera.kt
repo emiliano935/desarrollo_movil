@@ -16,7 +16,6 @@ import androidx.compose.ui.focus.FocusRequester.Companion.createRefs
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.constraintlayout.compose.ConstraintLayout
-import androidx.constraintlayout.widget.ConstraintLayout
 
 
 @Composable
