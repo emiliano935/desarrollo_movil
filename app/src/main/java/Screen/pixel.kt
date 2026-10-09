@@ -352,7 +352,8 @@ fun pixelArtScreen(modifier: Modifier = Modifier) {
                     horizontalArrangement = Arrangement.Center
                 ) {
                     repeat(4) {
-                        Box(modifier = Modifier.background(B).size(t))}
+                        Box(modifier = Modifier.background(B).size(t))
+                    }
                     repeat(3) {
                         Box(modifier = Modifier.background(N).size(t))
                     }
@@ -360,41 +361,21 @@ fun pixelArtScreen(modifier: Modifier = Modifier) {
                         Box(modifier = Modifier.background(ns).size(t))
                     }
                     repeat(1) {
-                        Box(modifier = Modifier.background(N).size(t))}
+                        Box(modifier = Modifier.background(N).size(t))
+                    }
 
                     repeat(3) {
-                        Box(modifier = Modifier.background(ns).size(t))}
-                    repeat(2) {
-                        Box(modifier = Modifier.background(N).size(t))}
-                    repeat(2) {
-                        Box(modifier = Modifier.background(ns).size(t))}
-                    repeat(1) {
-                        Box(modifier = Modifier.background(N).size(t))}
+                        Box(modifier = Modifier.background(ns).size(t))
                     }
-                }
-            Column {
-                Row(
-                    horizontalArrangement = Arrangement.Center
-                ) {
-                    repeat(5) {
-                        Box(modifier = Modifier.background(B).size(t))}
-                    repeat(1) {
+                    repeat(2) {
                         Box(modifier = Modifier.background(N).size(t))
                     }
                     repeat(2) {
-                        Box(modifier = Modifier.background(am).size(t))
+                        Box(modifier = Modifier.background(ns).size(t))
                     }
                     repeat(1) {
-                        Box(modifier = Modifier.background(N).size(t))}
-
-                    repeat(5) {
-                        Box(modifier = Modifier.background(ns).size(t))}
-                    repeat(1) {
-                        Box(modifier = Modifier.background(N).size(t))}
-                    repeat(2) {
-                        Box(modifier = Modifier.background(ns).size(t))}
-                    repeat(1) {
-                        Box(modifier = Modifier.background(N).size(t))}
+                        Box(modifier = Modifier.background(N).size(t))
+                    }
                 }
             }
             Column {
@@ -402,7 +383,39 @@ fun pixelArtScreen(modifier: Modifier = Modifier) {
                     horizontalArrangement = Arrangement.Center
                 ) {
                     repeat(5) {
-                        Box(modifier = Modifier.background(B).size(t))}
+                        Box(modifier = Modifier.background(B).size(t))
+                    }
+                    repeat(1) {
+                        Box(modifier = Modifier.background(N).size(t))
+                    }
+                    repeat(2) {
+                        Box(modifier = Modifier.background(am).size(t))
+                    }
+                    repeat(1) {
+                        Box(modifier = Modifier.background(N).size(t))
+                    }
+
+                    repeat(5) {
+                        Box(modifier = Modifier.background(ns).size(t))
+                    }
+                    repeat(1) {
+                        Box(modifier = Modifier.background(N).size(t))
+                    }
+                    repeat(2) {
+                        Box(modifier = Modifier.background(ns).size(t))
+                    }
+                    repeat(1) {
+                        Box(modifier = Modifier.background(N).size(t))
+                    }
+                }
+            }
+            Column {
+                Row(
+                    horizontalArrangement = Arrangement.Center
+                ) {
+                    repeat(5) {
+                        Box(modifier = Modifier.background(B).size(t))
+                    }
                     repeat(1) {
                         Box(modifier = Modifier.background(N).size(t))
                     }
@@ -410,16 +423,21 @@ fun pixelArtScreen(modifier: Modifier = Modifier) {
                         Box(modifier = Modifier.background(am).size(t))
                     }
                     repeat(2) {
-                        Box(modifier = Modifier.background(N).size(t))}
+                        Box(modifier = Modifier.background(N).size(t))
+                    }
 
                     repeat(3) {
-                        Box(modifier = Modifier.background(ns).size(t))}
+                        Box(modifier = Modifier.background(ns).size(t))
+                    }
                     repeat(1) {
-                        Box(modifier = Modifier.background(N).size(t))}
+                        Box(modifier = Modifier.background(N).size(t))
+                    }
                     repeat(1) {
-                        Box(modifier = Modifier.background(ns).size(t))}
+                        Box(modifier = Modifier.background(ns).size(t))
+                    }
                     repeat(1) {
-                        Box(modifier = Modifier.background(N).size(t))}
+                        Box(modifier = Modifier.background(N).size(t))
+                    }
                 }
             }
             Column {
@@ -427,21 +445,26 @@ fun pixelArtScreen(modifier: Modifier = Modifier) {
                     horizontalArrangement = Arrangement.Center
                 ) {
                     repeat(4) {
-                        Box(modifier = Modifier.background(B).size(t))}
+                        Box(modifier = Modifier.background(B).size(t))
+                    }
                     repeat(1) {
                         Box(modifier = Modifier.background(N).size(t))
                     }
                     repeat(1) {
-                        Box(modifier = Modifier.background(B).size(t))}
+                        Box(modifier = Modifier.background(B).size(t))
+                    }
                     repeat(1) {
-                        Box(modifier = Modifier.background(N).size(t))}
+                        Box(modifier = Modifier.background(N).size(t))
+                    }
                     repeat(3) {
                         Box(modifier = Modifier.background(am).size(t))
                     }
                     repeat(4) {
-                        Box(modifier = Modifier.background(ns).size(t))}
+                        Box(modifier = Modifier.background(ns).size(t))
+                    }
                     repeat(2) {
-                        Box(modifier = Modifier.background(N).size(t))}
+                        Box(modifier = Modifier.background(N).size(t))
+                    }
                 }
             }
             Column {
@@ -449,7 +472,8 @@ fun pixelArtScreen(modifier: Modifier = Modifier) {
                     horizontalArrangement = Arrangement.Center
                 ) {
                     repeat(5) {
-                       Box(modifier = Modifier.background(B).size(t))}
+                        Box(modifier = Modifier.background(B).size(t))
+                    }
                     repeat(3) {
                         Box(modifier = Modifier.background(N).size(t))
                     }
@@ -457,9 +481,11 @@ fun pixelArtScreen(modifier: Modifier = Modifier) {
                         Box(modifier = Modifier.background(am).size(t))
                     }
                     repeat(3) {
-                        Box(modifier = Modifier.background(ns).size(t))}
+                        Box(modifier = Modifier.background(ns).size(t))
+                    }
                     repeat(2) {
-                        Box(modifier = Modifier.background(N).size(t))}
+                        Box(modifier = Modifier.background(N).size(t))
+                    }
                 }
             }
 
@@ -468,14 +494,17 @@ fun pixelArtScreen(modifier: Modifier = Modifier) {
                     horizontalArrangement = Arrangement.Center
                 ) {
                     repeat(8) {
-                        Box(modifier = Modifier.background(B).size(t))}
+                        Box(modifier = Modifier.background(B).size(t))
+                    }
                     repeat(3) {
                         Box(modifier = Modifier.background(N).size(t))
                     }
                     repeat(1) {
-                        Box(modifier = Modifier.background(ns).size(t))}
+                        Box(modifier = Modifier.background(ns).size(t))
+                    }
                     repeat(2) {
-                        Box(modifier = Modifier.background(N).size(t))}
+                        Box(modifier = Modifier.background(N).size(t))
+                    }
                 }
             }
             Column {
@@ -483,7 +512,8 @@ fun pixelArtScreen(modifier: Modifier = Modifier) {
                     horizontalArrangement = Arrangement.Center
                 ) {
                     repeat(9) {
-                        Box(modifier = Modifier.background(B).size(t))}
+                        Box(modifier = Modifier.background(B).size(t))
+                    }
                     repeat(1) {
                         Box(modifier = Modifier.background(N).size(t))
                     }
@@ -491,12 +521,14 @@ fun pixelArtScreen(modifier: Modifier = Modifier) {
                         Box(modifier = Modifier.background(B).size(t))
                     }
                     repeat(1) {
-                        Box(modifier = Modifier.background(ns).size(t))}
+                        Box(modifier = Modifier.background(ns).size(t))
+                    }
                     repeat(1) {
                         Box(modifier = Modifier.background(B).size(t))
                     }
                     repeat(1) {
-                        Box(modifier = Modifier.background(N).size(t))}
+                        Box(modifier = Modifier.background(N).size(t))
+                    }
                 }
             }
             Column {
@@ -504,13 +536,14 @@ fun pixelArtScreen(modifier: Modifier = Modifier) {
                     horizontalArrangement = Arrangement.Center
                 ) {
                     repeat(10) {
-                        Box(modifier = Modifier.background(B).size(t))}
+                        Box(modifier = Modifier.background(B).size(t))
+                    }
                     repeat(4) {
                         Box(modifier = Modifier.background(N).size(t))
                     }
                 }
             }
-            }
+        }
         }
     }
 @Preview(showBackground = true)
