@@ -12,19 +12,33 @@ import androidx.compose.ui.res.colorResource
 import com.example.plantilla.R
 import androidx.compose.foundation.Image
 import androidx.compose.material3.Surface
+import androidx.compose.ui.focus.FocusRequester.Companion.createRefs
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.constraintlayout.compose.ConstraintLayout
+import androidx.constraintlayout.widget.ConstraintLayout
 
 
 @Composable
 fun BanderaButan(modifier: Modifier = Modifier) {
-    val ButanOrange = colorResource(R.color.naranja)
-    val ButanYellow = colorResource(R.color.amarillo)
-    Box(
-        modifier = modifier,
-        contentAlignment = Alignment.Center
+    val amarillo = colorResource(R.color.amarillo)
+    val naranja = colorResource(R.color.naranja)
+
+    ConstraintLayout(
+        modifier = modifier
     ) {
-        Canvas(modifier = Modifier.fillMaxSize()) {
+        val (fondoCanvas, dragonImage) = createRefs()
+
+        Canvas(
+            modifier = Modifier
+                .fillMaxSize()
+                .constrainAs(fondoCanvas) {
+                    top.linkTo(parent.top)
+                    bottom.linkTo(parent.bottom)
+                    start.linkTo(parent.start)
+                    end.linkTo(parent.end)
+                }
+        ) {
             val width = size.width
             val height = size.height
 
@@ -34,7 +48,7 @@ fun BanderaButan(modifier: Modifier = Modifier) {
                 lineTo(0f, height)
                 close()
             }
-            drawPath(path = pathYellow, color = ButanYellow)
+            drawPath(path = pathYellow, color = amarillo)
 
             val pathOrange = Path().apply {
                 moveTo(width, 0f)
@@ -42,16 +56,21 @@ fun BanderaButan(modifier: Modifier = Modifier) {
                 lineTo(0f, height)
                 close()
             }
-            drawPath(path = pathOrange, color = ButanOrange)
+            drawPath(path = pathOrange, color = naranja)
         }
 
         Image(
             painter = painterResource(id = R.drawable.butan),
-            contentDescription = null,
+            contentDescription = "escudo de que es un dragon de la bandera de butan" ,
             modifier = Modifier
                 .fillMaxSize(0.6f)
+                .constrainAs(dragonImage) {
+                    top.linkTo(parent.top)
+                    bottom.linkTo(parent.bottom)
+                    start.linkTo(parent.start)
+                    end.linkTo(parent.end)
+                }
         )
-
     }
 }
 
