@@ -1,1 +1,1 @@
-[**img: Bandera de mexico **]
+[**img: Bandera de mexico **](addbandera/banderaMexico.png)
