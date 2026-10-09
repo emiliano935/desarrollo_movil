@@ -14,8 +14,8 @@ import com.example.plantilla.R
 
 @Composable
 fun BanderaNepal(modifier: Modifier = Modifier) {
-    val redColor = colorResource(id = R.color.nepal_red)
-    val blueColor = colorResource(id = R.color.nepal_blue)
+    val rojo = colorResource(R.color.rojo)
+    val azul = colorResource(R.color.azul)
 
     Box(
         modifier = modifier,
@@ -35,7 +35,7 @@ fun BanderaNepal(modifier: Modifier = Modifier) {
             }
             drawPath(
                 path = pathBordeAzul,
-                color = blueColor
+                color = azul
             )
 
             val pathRojo = Path().apply {
@@ -48,13 +48,13 @@ fun BanderaNepal(modifier: Modifier = Modifier) {
             }
             drawPath(
                 path = pathRojo,
-                color = redColor
+                color = rojo
             )
         }
     }
 }
 
-@Preview(showBackground = true, widthDp = 300, heightDp = 300)
+@Preview(showBackground = true,)
 @Composable
 fun BanderaNepalPreview() {
     Surface {
