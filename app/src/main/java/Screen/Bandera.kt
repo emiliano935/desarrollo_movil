@@ -20,7 +20,6 @@ import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.constraintlayout.compose.ConstraintLayout
 import androidx.constraintlayout.compose.Dimension
-import androidx.constraintlayout.widget.ConstraintLayout
 import com.example.plantilla.R
 
 @Composable
