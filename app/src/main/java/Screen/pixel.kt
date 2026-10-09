@@ -22,6 +22,7 @@ import com.example.plantilla.R
 
 //Box(modifier = Modifier.background(N).fillMaxWidth(0.04f).fillMaxHeight(0.02f)) medidade un bloque
 //
+//
 @Composable
 fun pixelArtScreen(modifier: Modifier = Modifier) {
     val t = 16.dp
