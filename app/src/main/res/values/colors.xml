@@ -5,6 +5,10 @@
     <color name="purple_700">#FF3700B3</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="charmander_orange">#F36618</color>
+    <color name="charmander_red">#EE3D1B</color>
+    <color name="charmander_yellow">#F3B229</color>
+    <color name="charmander_black">#000000</color>
+    <color name="charmander_white">#FFFFFF</color>
+    <color name="rojo">#EE3D1B</color>`
 </resources>
